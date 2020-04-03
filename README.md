@@ -4,9 +4,7 @@ I created every element on the page dynamically. I did not touch the html docume
 
 I started by inserting the formula to display the correct date at the top of the page.
 
-I created a variable that holds an array of numbers nine to seventeen to be called later, 
-
-so I could inject those numbers as values and Id's of certain elements.
+I created a variable that holds an array of numbers nine to seventeen to be called later, so I could inject those numbers as values and Id's of certain elements.
 
 I also created a variable to store the names of the times to be displayed and looped through that to minimize the number of lines of code
 
@@ -20,7 +18,7 @@ This updates in real time.
 
 For the save button, I stored the value of each discription to its parent Id and set that to local storage
 
-the last several lines retrieve each value and stores them in the appropriate <div>.
+The last several lines retrieve each value and stores them in the appropriate <div>.
 
 Unfortunately this step had to be done in a repetetive fashion
 
