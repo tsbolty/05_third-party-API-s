@@ -10,7 +10,7 @@ I also created a variable to store the names of the times to be displayed and lo
 
 I created the div elements dynamically, and added classes, id's and values in the same line of code
 
-I created the text area and button for each <div> and appended those to the creation of each div
+I created the text area and button dynamically and appended those to the creation of each div
 
 I wrote an if statement to determine if the id of certain elements are equal to, greater than or less than the current hour
 
