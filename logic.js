@@ -7,6 +7,7 @@ for (i=0; i<hour.length; i++){
 
     var currentTime = displayHour[i]
 
+    // Will append 9 rows each with appropriate classes and data
     $(".container").append(`
       <div id= "hour-${hour[i]}" class= "row time-block">
         <div class= "col-md-1 hour">${currentTime}</div>
@@ -15,6 +16,7 @@ for (i=0; i<hour.length; i++){
       </div>
     `)
 
+    // Comparing Moment's hour to our iteration of hours
     if(moment().format("H") == hour[i]){
     $("#hour-"+ hour[i]).addClass("present")
     } else if(moment().format("H")> hour[i]){
@@ -23,18 +25,14 @@ for (i=0; i<hour.length; i++){
     $("#hour-"+ hour[i]).addClass("future")
 }}
 
+// Sets local storage by grabbing siblings and parent of save button values
 $(".saveBtn").on("click", function(){
     var value= $(this).siblings(".description").val()
     var time= $(this).parent().attr("id")
     localStorage.setItem(time, value)
 })
 
-$("#hour-9 .description").val(localStorage.getItem("hour-9"))
-$("#hour-10 .description").val(localStorage.getItem("hour-10"))
-$("#hour-11 .description").val(localStorage.getItem("hour-11"))
-$("#hour-12 .description").val(localStorage.getItem("hour-12"))
-$("#hour-13 .description").val(localStorage.getItem("hour-13"))
-$("#hour-14 .description").val(localStorage.getItem("hour-14"))
-$("#hour-15 .description").val(localStorage.getItem("hour-15"))
-$("#hour-16 .description").val(localStorage.getItem("hour-16"))
-$("#hour-17 .description").val(localStorage.getItem("hour-17"))
+// Getting from local storage
+for(var i = 9; i< 18; i++){
+  $(`#hour-${i} .description`).val(localStorage.getItem(`hour-${i}`))
+}
